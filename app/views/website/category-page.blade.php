@@ -25,8 +25,7 @@
 					<article class="category-page-excerpt">
 						<div class="col-md-6">
 							<h2>{{link_to($category_slug . '/' . $article->slug, $article->title)}}</h2>
-							<img src="http://placehold.it/450x200" class="img-responsive">
-							<p class="excerpt">{{$article->excerpt}}</p>
+							<div class="excerpt">{{$article->excerpt}}</div>
 							<p>{{link_to($category_slug . '/' . $article->slug, trans(''))}}</p>
 						</div>
 					</article>
