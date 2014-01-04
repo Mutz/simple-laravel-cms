@@ -1,0 +1,9 @@
+{
+  "name": "Casa de pedra",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": ">= 3.0.3",
+    "summernote": ">=0.4.2",
+    "blueimp-file-upload": "~9.4"
+  }
+}

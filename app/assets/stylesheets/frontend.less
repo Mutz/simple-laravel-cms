@@ -1,0 +1,274 @@
+@import 'base.less';
+@import 'slider.less';
+
+html{
+	height: 100%;
+}
+body {
+	font-weight: 300;
+	height: 100%;
+}
+
+/*===============================
+=            Navbar (Home page)            =
+===============================*/
+.navbar-default{
+	background-color: white;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    transition: height 0.3s;
+    .navbar-header>a>img{
+	    -webkit-transition: height 0.3s;
+	    -moz-transition: height 0.3s;
+	    transition: height 0.3s;
+    }
+	&.navbar-shrink{
+	    height: 90px;
+	    background-color: @brand-primary;
+	    a{
+	    	color:#fff! important;
+	    }
+	    .navbar-header>a>img{
+	    	height: 70px;
+	    }		
+	}
+	#topnav{
+		position:absolute;
+		bottom: 0;
+		right: 0;
+		a{
+			color: @brand-primary;
+			font-size: 1.1em;
+			font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+			text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+			&:hover{
+				color: @brand-warning;
+			}
+		}
+	}
+}
+ /*-----  End of Navbar (Home page)  ------*/
+
+
+/*=================================
+=            Home page            =
+=================================*/
+#feature_slider .slide{
+	&#hospedagem .info {
+		h2{
+			font-size: 5em;
+			font-weight: bold;
+			background-color: rgba(red(@brand-warning), green(@brand-warning), blue(@brand-warning), 0.5);
+			padding: 20px 20px 30px 20px;
+			text-shadow: 2px 2px 7px #000;
+		}
+		a{
+			padding: 5px;
+			background-color: rgba(red(@brand-warning), green(@brand-warning), blue(@brand-warning), 0.5);
+			color:darken(@brand-info,30%);
+			font-style: italic;
+		}
+	}
+	&#cultura .info {
+		h2{
+			font-size: 5em;
+			font-weight: bold;
+			background-color: rgba(red(@brand-warning), green(@brand-warning), blue(@brand-warning), 0.5);
+			padding: 20px 20px 30px 20px;
+			text-shadow: 2px 2px 7px #000;
+		}
+		a{
+			padding: 5px;
+			background-color: rgba(red(@brand-warning), green(@brand-warning), blue(@brand-warning), 0.5);
+			color:darken(@brand-info,30%);
+			font-style: italic;
+		}
+	}
+	&#capoeira .info {
+		width:35%;
+		h2{
+			font-size: 5em;
+			font-weight: bold;
+			text-shadow: 2px 2px 7px #000;
+		}
+		a{
+			padding: 5px;
+			background-color: rgba(red(@brand-warning), green(@brand-warning), blue(@brand-warning), 0.5);
+			color:darken(@brand-info,30%);
+			font-style: italic;
+		}
+	}
+}
+
+
+/*-----  End of Home page  ------*/
+
+
+
+/*===================================
+=            Inner pages            =
+===================================*/
+.side-menu{
+	list-style: none;
+	margin: 0;
+	padding:0;
+	li{
+		border-bottom: 1px dotted @gray-light;
+		overflow: hidden;
+		&:first-child{
+			// border-top: none;
+		}
+		a {
+			display: block;
+			padding: 5px 2px;
+			&:hover {
+				background-color: @gray-lighter;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.inner-page{
+	h1{
+		padding-bottom: 20px;
+		border-bottom: 1px solid @brand-primary;
+		margin-top: 60px;
+	}
+	.navbar-default{
+		& > .container{
+			width: 100%;
+			padding: 0;
+			.navbar-header{
+				float:none;
+				text-align: center;
+				margin-top: 20px;
+				.navbar-brand{
+					float:none;
+				}
+			}
+			#topnav{
+				float:none! important;
+				text-align: center;
+				background-color: @brand-primary;
+				position: relative;
+				ul{
+					float: none;
+					display: inline-block;
+					a{
+						color: #fff;
+						&:hover{
+							color: @brand-warning;
+						}
+					}
+				}
+			}
+		}
+		&.navbar-shrink{
+			height: 56px;
+			// & > .container{
+			// 	width: auto;
+			// 	padding:
+			// }
+			.shrink-logo{
+				display: none;
+			}
+		}
+	}
+	.wrap{
+		padding-top: 200px;
+		.main{
+			padding-bottom: 30px;
+		}
+	}
+
+}
+
+/*-----  End of Inner pages  ------*/
+
+
+/*=====================================
+=            Category page            =
+=====================================*/
+.category-page-excerpt{
+	p.excerpt{
+		margin-top: 10px;
+		min-height: 150px;
+	}
+}
+
+
+/*-----  End of Category page  ------*/
+
+
+
+/*==============================
+=            Footer            =
+==============================*/
+.wrap {
+  min-height: 100%;
+  margin-bottom: -111px;
+  padding-top: 51px;
+}
+.wrap:after {
+  content: "";
+  display: block;
+}
+.footer, .wrap:after {
+  /* .push must be the same height as footer */
+  height: 111px; 
+}
+.social-footer{
+	background: @gray-light;
+	color: #fff;
+	border-top: 1px solid @gray;
+	border-bottom: 1px solid @gray-light;
+	padding: 12px 0;
+	a {
+		color: @gray-dark;
+		text-decoration: none;
+		&:hover{color: @brand-primary}
+		i {
+			font-size: 2em;
+			margin: 0 20px;
+		}
+	}
+}
+.copyright-footer{
+	background: @gray-darker;
+	color: @brand-warning;
+	border-top: 1px solid @gray-light;
+	padding: 15px 0;
+	a {
+		color: @brand-warning;
+		text-decoration: none;
+		&:hover{color: @brand-warning}
+	}
+}
+/*-----  End of Footer  ------*/
+
+
+/**
+*
+* Responsive
+*
+**/
+@media (max-width: @screen-sm-max) { 
+	#topnav{
+		position: relative;
+		float: none! important;
+		text-align: center;
+		background-color: @brand-primary;
+		a{
+			color: #fff;
+			font-size: 1.3em;
+			&:hover{
+				color: @brand-warning;
+			}
+		}
+	}
+}
+
