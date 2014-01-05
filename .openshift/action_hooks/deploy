@@ -9,6 +9,7 @@
 # .openshift/action_hooks/deploy
 unset GIT_DIR
 cd $OPENSHIFT_REPO_DIR
+ln -sf $OPENSHIFT_DATA_DIR/uploads $OPENSHIFT_REPO_DIR/php/imagens
 curl -sS https://getcomposer.org/installer | php
 php composer.phar install --prefer-source --no-interaction  // the arguments is used to work around github api rate limits
 php composer.phar dump-autoload

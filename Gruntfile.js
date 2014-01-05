@@ -42,7 +42,6 @@ module.exports = function(grunt) {
         css: {
           src: [
               './php/assets/stylesheets/backend.css',
-              './bower_components/blueimp-file-upload/css/jquery.fileupload.css'
           ],
           dest: './php/assets/stylesheets/backend.css',
         },

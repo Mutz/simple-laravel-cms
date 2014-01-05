@@ -9,7 +9,7 @@ class UsersController extends BaseController {
 			 'password' => Input::get('password'),
 			 );
 
-		if ( Auth::attempt($userdata)) {return Redirect::to('/dashboard/');}
+		if ( Auth::attempt($userdata)) {return Redirect::intended('dashboard');}
 		 else {return Redirect::to('/login')->withInput(Input::except('password'));}
 	}
 }
