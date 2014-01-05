@@ -2,11 +2,11 @@
 class CategorySeeder extends Seeder {
 
 	public function run(){
-		$Categories = [
-			['title'=>'Casa de Pedra'],
-			['title'=>'Capoeira'],
-			['title'=>'Hospedagem'],
-		];
+		$Categories = array(
+			array('title'=>'Casa de Pedra'),
+			array('title'=>'Capoeira'),
+			array('title'=>'Hospedagem'),
+		);
 
 		DB::table('categories')->insert($Categories);
 	}
