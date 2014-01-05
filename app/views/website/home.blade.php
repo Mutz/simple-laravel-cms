@@ -4,7 +4,7 @@
 	Casa de Pedra - Vale do Capão, Chapada Diamantina
 @stop
 
-@section('navbar')
+{section('navbar')
 	@include('website._partials.navbar_home')
 @stop
 
@@ -29,61 +29,60 @@
         </article>
     </section>
 
-
-	<section id="quem-somos" class="section mg-t-bg mg-b-bg">
-		<div class="container">
-			<div class="col-md-12 text-center">
-				<h2>Quem somos?</h2>
-				<hr>
-			</div>
-			<div class="col-md-12 text-center">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. </p>
-			</div>
-        </div>
-	</section>
-
-	<section id="" class="section" class="section mg-t-bg">
-		<div class="container">
-			<div class="col-md-4 text-center">
-				<h2>Hospedagem</h2>
-				<hr>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molesti consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla </p>
-				{{link_to('/hospedagem','Conheça mais',array('class'=>'btn btn-large btn-block btn-flat'))}}
-			</div>
-			<div class="col-md-4 text-center">
-				<h2>Capoeira</h2>
-				<hr>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molesti consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla </p>
-				{{link_to('/capoeira','Conheça mais',array('class'=>'btn btn-large btn-block btn-flat'))}}
-			</div>
-			<div class="col-md-4 text-center">
-				<h2>Cultura</h2>
-				<hr>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molesti consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla </p>
-				{{link_to('/casa-de-pedra','Conheça mais',array('class'=>'btn btn-large btn-block btn-flat'))}}
-			</div>
-        </div>
-	</section>
-
-	<section id="novidades" class="section mg-t-bg mg-b-bg">
-		<div class="container">
-			<div class="col-md-12">
-				<h2>Novidades</h2>
-				<hr>
-			</div>
-			<div class="col-md-12">
-				@foreach($news as $nw)
-					<div class="col-md-6">
-						<h4>{{$nw->title}}</h4>
-						<p>{{$nw->excerpt}}</p>
-						<p>{{link_to('/novidades/'.$nw->slug,'Leia mais...')}}</p>
-					</div>
-				@endforeach
-			</div>
-        </div>
-	</section>
-
-
+<div class="content-area">
+		<section id="quem-somos" class="section wrapper mg-t-bg mg-b-bg">
+			<div class="container">
+				<div class="col-md-12 text-center">
+					<h2>Quem somos?</h2>
+					<hr>
+				</div>
+				<div class="col-md-12 text-center">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. </p>
+				</div>
+	        </div>
+		</section>
+	
+		<section id="" class="section" class="section mg-t-bg">
+			<div class="container">
+				<div class="col-md-4 text-center">
+					<h2>Hospedagem</h2>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molesti consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla </p>
+					{{link_to('/hospedagem','Conheça mais',array('class'=>'btn btn-large btn-block btn-flat'))}}
+				</div>
+				<div class="col-md-4 text-center">
+					<h2>Capoeira</h2>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molesti consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla </p>
+					{{link_to('/capoeira','Conheça mais',array('class'=>'btn btn-large btn-block btn-flat'))}}
+				</div>
+				<div class="col-md-4 text-center">
+					<h2>Cultura</h2>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla dolores tempore eius tempora ab rem recusandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molesti consectetur adipisicing elit. Esse, quas unde ipsam repellendus ullam facere molestiae aspernatur nemo quaerat cupiditate magni officia nulla </p>
+					{{link_to('/casa-de-pedra','Conheça mais',array('class'=>'btn btn-large btn-block btn-flat'))}}
+				</div>
+	        </div>
+		</section>
+	
+		<section id="novidades" class="section mg-t-bg mg-b-bg">
+			<div class="container">
+				<div class="col-md-12">
+					<h2>Novidades</h2>
+					<hr>
+				</div>
+				<div class="col-md-12">
+					@foreach($news as $nw)
+						<div class="col-md-4">
+							<h4>{{link_to('/novidades/'.$nw->slug,$nw->title)}}</h4>
+							<p>{{$nw->excerpt}}</p>
+							<div>{{link_to('/novidades/'.$nw->slug,'Leia mais...')}}</div>
+						</div>
+					@endforeach
+				</div>
+	        </div>
+		</section>
+	</div>
 @stop
 
 @section('javascript')

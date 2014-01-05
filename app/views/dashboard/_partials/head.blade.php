@@ -15,9 +15,9 @@
     @show
 
     <!-- open Roboto fonts -->
-    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Slab:400,300' rel='stylesheet' type='text/css'> -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
     <!-- Font awesome CDN -->
-    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 
     <!-- open sans font -->

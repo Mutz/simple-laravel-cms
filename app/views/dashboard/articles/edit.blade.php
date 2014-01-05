@@ -7,8 +7,10 @@
 @section('content')
 	<div class="create_article">
 		<div class="row">
-			<div class="col-md-8 col-lg-6">
+			<div class="col-md-8 col-lg-6 mg-b-bg">
 				<h1>{{trans('article.add_new')}} '{{$category->title}}'</h1>
+				<p>{{HTML::iconLink('/'.$category->slug .'/'.$article->slug,trans('article.view_on_site'),array('target'=>'_blank'),'fa-external-link')}}</p>
+
 			</div>
 		</div>
 		<div class="row">

@@ -13,6 +13,7 @@ return array(
 	'add_new' => 'Add a new article in ',
 	'delete' => 'Delete article',
 	'are_you_sure' => 'Are you sure you want to delete this article?',
-	'read_more' => 'Read more'
+	'read_more' => 'Read more',
+	'view_on_site' => 'View on site',
 
 );

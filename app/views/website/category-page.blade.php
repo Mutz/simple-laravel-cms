@@ -10,17 +10,14 @@
 @stop
 
 @section('content')
-	<div class="container main">
+	<div class="container main categories">
 		<div class="row">
 			<div class="col-md-12">
 		        <h1  class="mg-b-big text-center">{{$category_title}}</h1>
 			</div>
 		</div>
 	    <div class="row">
-	    	<div class="col-md-2 box">
-	    		@include('website._partials.sidebar')
-	    	</div>
-	    	<div class="col-md-10 box">
+	    	<div class="col-md-12 box article">
 				@foreach($articles_in_category as $article)
 					<article class="category-page-excerpt">
 						<div class="col-md-6">

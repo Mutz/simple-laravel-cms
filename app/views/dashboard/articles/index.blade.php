@@ -12,7 +12,8 @@
 	<table class="table table-hover">
 	  	<thead>
         	<tr>
-            	<th>{{trans('article.title')}}</th>
+              <th>{{trans('article.title')}}</th>
+            	<th style="text-align:center">{{trans('article.view_on_site')}}</th>
             	<th>{{trans('article.order')}}</th>
             	<th>{{trans('article.created_at')}}</th>
             	<th>{{trans('article.updated_at')}}</th>
@@ -22,7 +23,8 @@
         <tbody>
         	@foreach($articles as $article)
         	<tr class="article-list-item">
-        		<td>{{link_to('dashboard/category/'.$category->id.'/article/'.$article->id.'/edit', $article->title, array(1,2))}}</td>
+            <td>{{link_to('dashboard/category/'.$category->id.'/article/'.$article->id.'/edit', $article->title, array(1,2))}}</td>
+            <td align="center">{{HTML::iconLink('/'.$category->slug,'',array('target'=>'_blank'),'fa-external-link')}}</td>
         		<td>{{$article->order}}</td>
         		<td>{{$article->created_at}}</td>
         		<td>{{$article->updated_at}}</td>

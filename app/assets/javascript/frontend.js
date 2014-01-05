@@ -94,3 +94,15 @@ var cbpAnimatedHeaderLogo=(function(){
   f();
 })();
 /*-----  End of Resizing header on scroll  ------*/
+
+
+/*===============================================
+=    Attach "img-responsive" class to images            =
+===============================================*/
+
+$(document).ready(function($){
+  $('img').addClass('img-responsive mg-b-sm img-thumbnail');
+})
+
+/*-----  End of Attach "img-responsive" class to images  ------*/
+

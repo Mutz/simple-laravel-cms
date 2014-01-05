@@ -8,7 +8,23 @@ body {
 	font-weight: 300;
 	height: 100%;
 }
-
+// body .wrap .content-area:after, body .wrap .content-area:before{
+// 	content: '';
+// 	position: absolute;
+// 	top: 20%;
+// 	left: 10px;
+// 	width: 1000px;
+// 	height: 1000px;
+// 	border-radius: 50%;
+// 	z-index: 1;
+// 	background: rgba(255, 255, 255, 0.1);
+// 	border: 1px solid rgba(255, 255, 255, 0.15);
+// 	-webkit-transform: rotate(45deg);
+// 	-moz-transform: rotate(45deg);
+// 	-ms-transform: rotate(45deg);
+// 	-o-transform: rotate(45deg);
+// 	transform: rotate(45deg);
+// }
 /*==================================
 =            Login Page            =
 ==================================*/
@@ -30,33 +46,50 @@ body {
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     transition: height 0.3s;
-    .navbar-header>a>img{
-	    -webkit-transition: height 0.3s;
-	    -moz-transition: height 0.3s;
-	    transition: height 0.3s;
+    .navbar-brand{
+    	padding:0;
+    	img{
+		    -webkit-transition: height 0.3s;
+		    -moz-transition: height 0.3s;
+		    transition: height 0.3s;
+		    margin-bottom: 0! important;
+		    border: 0!important;
+		    width: 100px;
+	    }
     }
 	&.navbar-shrink{
-	    height: 90px;
+	    height: 50px;
 	    background-color: @brand-primary;
 	    a{
 	    	color:#fff! important;
 	    }
 	    .navbar-header>a>img{
-	    	height: 70px;
-	    }		
+	    	height: 50px;
+	    	width: auto;
+	    }
+	    #topnav a{
+	    	line-height: 50px;
+	    	font-size: 1.1em;
+	    }
+		
 	}
 	#topnav{
-		position:absolute;
-		bottom: 0;
-		right: 0;
+		// position:absolute;
+		// bottom: 0;
+		// right: 0;
+		height: auto !important;
+
+		// float: none;
 		a{
 			color: @brand-primary;
-			font-size: 1.1em;
-			font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-			text-transform: uppercase;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+			font-size: 1.3em;
+			font-family: @font-family-sans-serif;
+			font-weight: 400;
+		    -webkit-transition: all 0.3s;
+		    -moz-transition: all 0.3s;
+		    transition: all 0.3s;
+		    padding: 0 20px;
+		    line-height: 83px;
 
 			&:hover{
 				color: @brand-warning;
@@ -104,8 +137,9 @@ body {
 	&#capoeira .info {
 		width:35%;
 		h2{
-			font-size: 5em;
+			font-size: 4em;
 			font-weight: bold;
+			text-align: right;
 			text-shadow: 2px 2px 7px #000;
 		}
 		a{
@@ -116,8 +150,14 @@ body {
 		}
 	}
 }
-
-
+#quem-somos{
+	// background-image: url('../img/brickwall.png');
+}
+#novidades{
+	div{
+		text-align: justify;
+	}
+}
 /*-----  End of Home page  ------*/
 
 
@@ -128,21 +168,27 @@ body {
 .side-menu{
 	list-style: none;
 	margin: 0;
-	padding:0;
+	padding:0 25px 0 0;
 	li{
 		border-bottom: 1px dotted @gray-light;
 		overflow: hidden;
+		color:@gray;
+		text-align: justify;
+		padding-bottom: 15px;
+		margin-bottom:15px;
 		&:first-child{
 			// border-top: none;
 		}
 		a {
 			display: block;
 			padding: 5px 2px;
+			font-size: 1.5em;
+			margin-bottom: 10px;
 			&:hover {
-				background-color: @gray-lighter;
 				text-decoration: none;
 			}
 		}
+
 	}
 }
 .inner-page{
@@ -151,48 +197,54 @@ body {
 		border-bottom: 1px solid @brand-primary;
 		margin-top: 60px;
 	}
-	.navbar-default{
-		& > .container{
-			width: 100%;
-			padding: 0;
-			.navbar-header{
-				float:none;
-				text-align: center;
-				margin-top: 20px;
-				.navbar-brand{
-					float:none;
-				}
-			}
-			#topnav{
-				float:none! important;
-				text-align: center;
-				background-color: @brand-primary;
-				position: relative;
-				ul{
-					float: none;
-					display: inline-block;
-					a{
-						color: #fff;
-						&:hover{
-							color: @brand-warning;
-						}
-					}
-				}
-			}
-		}
-		&.navbar-shrink{
-			height: 56px;
-			// & > .container{
-			// 	width: auto;
-			// 	padding:
-			// }
-			.shrink-logo{
-				display: none;
-			}
-		}
+	// .navbar-default{
+	// 	& > .container{
+	// 		width: 100%;
+	// 		padding: 0;
+	// 		.navbar-header{
+	// 			float:none;
+	// 			text-align: center;
+	// 			margin-top: 20px;
+	// 			.navbar-brand{
+	// 				float:none;
+	// 			}
+	// 		}
+	// 		#topnav{
+	// 			float:none! important;
+	// 			text-align: center;
+	// 			background-color: @brand-primary;
+	// 			position: relative;
+	// 			ul{
+	// 				float: none;
+	// 				display: inline-block;
+	// 				a{
+	// 					color: #fff;
+	// 					&:hover{
+	// 						color: @brand-warning;
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// 	&.navbar-shrink{
+	// 		height: 56px;
+	// 		// & > .container{
+	// 		// 	width: auto;
+	// 		// 	padding:
+	// 		// }
+	// 		.shrink-logo{
+	// 			display: none;
+	// 		}
+	// 	}
+	// }
+	.categories .article,
+	.articles .article{
+		font-size: 1.3em;
+		color: @gray-dark;
+		text-align: justify;
 	}
 	.wrap{
-		padding-top: 200px;
+		padding-top: 80px;
 		.main{
 			padding-bottom: 30px;
 		}

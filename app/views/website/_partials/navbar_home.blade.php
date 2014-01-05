@@ -1,4 +1,4 @@
-    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top"  role="navigation">
       <!-- <div class="cbp-af-inner"> -->
         <div class="container">
         <div class="navbar-header">
