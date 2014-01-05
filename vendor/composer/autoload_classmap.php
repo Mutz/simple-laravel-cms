@@ -16,7 +16,6 @@ return array(
     'CreateCategoriesTable' => $baseDir . '/app/database/migrations/2013_12_12_144302_create_categories_table.php',
     'CreateUsersTable' => $baseDir . '/app/database/migrations/2013_12_31_024423_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
-    'DropUsersTable' => $baseDir . '/app/database/migrations/2013_12_21_001017_drop_users_table.php',
     'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
     'S3SoapClient' => $vendorDir . '/barryvdh/laravel-elfinder/src/elFinder/elFinderVolumeS3.class.php',

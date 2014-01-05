@@ -11,4 +11,8 @@ return array(
 	'no' => 'No',
 	'are_you_sure' => 'Are you sure?',
 	'home' => 'Home',
+	'login' => 'Login',
+	'login' => 'Login',
+	'email' => 'Email',
+	'password' => 'Password',
 );

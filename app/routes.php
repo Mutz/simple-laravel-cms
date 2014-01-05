@@ -9,22 +9,27 @@ Route::get('test', function() {
 
 
 Route::get('/', 'WebsiteController@home');
+Route::get('/login', 'WebsiteController@login');
+Route::post('/login', 'UsersController@login');
+
 Route::get('/contato', 'WebsiteController@contact');
+// Route::get('/contato', 'WebsiteController@contact');
 		// ->before('cache.fetch')
 		// ->after('cache.put');
     // Route::resource('category.article', 'WebsiteController');
 
 Route::group(array('prefix' => 'dashboard'), function()
 {
+    Route::get('/', 'WebsiteController@dashboard');
     Route::resource('category.article', 'ArticlesController');
 });
 
-// Route::group(array('before' => 'auth'), function()
-//     {
+Route::group(array('before' => 'auth'), function()
+    {
         \Route::get('elfinder', 'Barryvdh\Elfinder\ElfinderController@showIndex');
         \Route::any('elfinder/connector', 'Barryvdh\Elfinder\ElfinderController@showConnector');
         \Route::get('elfinder/tinymce', 'Barryvdh\Elfinder\ElfinderController@showTinyMCE4');
-    // });
+    });
 
 
 Route::get('/{category}/{article}', 'WebsiteController@article');

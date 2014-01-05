@@ -18,7 +18,6 @@ class ArticlesController extends BaseController {
 		$this->validator = $validator;
 	}
 
-
 	/**
 	 * Display a listing of the resource.
 	 *

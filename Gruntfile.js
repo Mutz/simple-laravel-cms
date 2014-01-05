@@ -11,9 +11,9 @@ module.exports = function(grunt) {
               },
               files: {
                 //compiling frontend.less into frontend.css
-                "./public/assets/stylesheets/frontend.css":"./app/assets/stylesheets/frontend.less",
+                "./php/assets/stylesheets/frontend.css":"./app/assets/stylesheets/frontend.less",
                 //compiling backend.less into backend.css
-                "./public/assets/stylesheets/backend.css":"./app/assets/stylesheets/backend.less"
+                "./php/assets/stylesheets/backend.css":"./app/assets/stylesheets/backend.less"
               }
           }
       },
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
               './app/assets/javascript/slider.js',
               './app/assets/javascript/classie.js',
               ],
-          dest: './public/assets/javascript/frontend.js',
+          dest: './php/assets/javascript/frontend.js',
         },
         js_backend: {
           src: [
@@ -37,14 +37,14 @@ module.exports = function(grunt) {
               './bower_components/tinymce/js/tinymce/tinymce.min.js',
               './app/assets/javascript/backend.js'
           ],
-          dest: './public/assets/javascript/backend.js',
+          dest: './php/assets/javascript/backend.js',
         },
         css: {
           src: [
-              './public/assets/stylesheets/backend.css',
+              './php/assets/stylesheets/backend.css',
               './bower_components/blueimp-file-upload/css/jquery.fileupload.css'
           ],
-          dest: './public/assets/stylesheets/backend.css',
+          dest: './php/assets/stylesheets/backend.css',
         },
       },
       uglify: {
@@ -53,8 +53,8 @@ module.exports = function(grunt) {
         },
         dist: {
           files: {
-            './public/assets/javascript/frontend.js': './public/assets/javascript/frontend.js',
-            './public/assets/javascript/backend.js': './public/assets/javascript/backend.js'
+            './php/assets/javascript/frontend.js': './php/assets/javascript/frontend.js',
+            './php/assets/javascript/backend.js': './php/assets/javascript/backend.js'
           }
         },
       },

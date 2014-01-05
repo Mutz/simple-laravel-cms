@@ -20,6 +20,10 @@ class WebsiteController extends BaseController {
 	{
 		return View::make('website.contact');
 	}
+	public function login($value='')
+	{
+        return View::make('website.login');
+	}
 	public function index($category_slug)
 	{
 		$category = $this->category->getBySlug($category_slug);
@@ -41,4 +45,10 @@ class WebsiteController extends BaseController {
         			->with('category_slug',$category_slug)
         			->with('category_title',$category->title);
 	}
+	public function dashboard()
+	{
+		return View::make('dashboard.index');
+	}
+
+	
 }

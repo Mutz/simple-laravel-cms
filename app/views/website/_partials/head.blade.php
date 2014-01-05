@@ -13,9 +13,9 @@
     @show
 
     {{HTML::style(asset('assets/stylesheets/frontend.css'))}}
-<!--     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">    
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">    
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300|Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
- -->
+
     @yield('head')
 </head>
  
