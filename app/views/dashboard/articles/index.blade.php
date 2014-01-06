@@ -6,7 +6,8 @@
 
 @section('content')
 	<h1>{{$category->title}}</h1>
-	<p><span><i>{{trans('article.articles_in_category')}} {{$category->title}}</i></span></p>
+  <p><span><i>{{trans('article.articles_in_category')}} {{$category->title}}</i></span></p>
+  <p class="mg-b-bg">{{HTML::iconLink('/'.$category->slug,trans('article.view_on_site'),array('target'=>'_blank'),'fa-external-link')}}</p>
 	{{link_to('dashboard/category/' .$category->id . '/article/create',trans('general.new'), array('class'=>'btn btn-flat'))}}
 	<hr>
 	<table class="table table-hover">
@@ -30,16 +31,12 @@
         		<td>{{$article->updated_at}}</td>
         		<td>
 					{{Form::open(array(
-							// 'class'=>'delete_form';
 							'url'=>'dashboard/category/'.$category->id.'/article/'.$article->id,
 							'method'=>'DELETE',
-							// 'onSubmit'=>'return confirmDelete()',
-              // 'id'=>'article_' .$article->id,
               'class'=>'delete-form'
 							));}}
 							{{Form::button('', array('class'=>'delete-button fa fa-trash-o','type'=>'submit'))}}
 					{{Form::close()}}
-    			{{--HTML::iconLink('dashboard/category/'.$category->id.'/article/'.$article->id, '', array('class'=>'delete-icon fa fa-trash-o','data-method'=>'DELETE','data-article'=>$article_id))--}}
         		</td>
         	</tr>
         	@endforeach

@@ -27,6 +27,7 @@ module.exports = function(grunt) {
               './app/assets/javascript/frontend.js',
               './app/assets/javascript/slider.js',
               './app/assets/javascript/classie.js',
+              './bower_components/bootstrap/dist/js/bootstrap.min.js',
               ],
           dest: './php/assets/javascript/frontend.js',
         },

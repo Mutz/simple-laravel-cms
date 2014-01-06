@@ -29,12 +29,4 @@
 
 @section('scripts')
 	@parent()
-	<script>
-	// var articleBody = '{{$article->body}}';
-	// var articleExcerpt = '{{$article->excerpt}}';
-	// var postForm = function() {
-	// 	var body = $('textarea[name="body"]').html($('#body').code());
-	// 	var excerpt = $('textarea[name="excerpt"]').html($('#excerpt').code());
-	// }	
-	</script>
 @stop	
