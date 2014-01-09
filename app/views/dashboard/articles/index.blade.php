@@ -25,18 +25,12 @@
         	@foreach($articles as $article)
         	<tr class="article-list-item">
             <td>{{link_to('dashboard/category/'.$category->id.'/article/'.$article->id.'/edit', $article->title, array(1,2))}}</td>
-            <td align="center">{{HTML::iconLink('/'.$category->slug,'',array('target'=>'_blank'),'fa-external-link')}}</td>
+            <td align="center">{{HTML::iconLink('/'.$category->slug.'/'.$article->slug,'',array('target'=>'_blank'),'fa-external-link')}}</td>
         		<td>{{$article->order}}</td>
         		<td>{{$article->created_at}}</td>
         		<td>{{$article->updated_at}}</td>
         		<td>
-					{{Form::open(array(
-							'url'=>'dashboard/category/'.$category->id.'/article/'.$article->id,
-							'method'=>'DELETE',
-              'class'=>'delete-form'
-							));}}
-							{{Form::button('', array('class'=>'delete-button fa fa-trash-o','type'=>'submit'))}}
-					{{Form::close()}}
+            {{Form::delete('dashboard/category/'.$category->id.'/article/'.$article->id,'',NULL,array('class'=>'delete-button fa fa-trash-o','type'=>'submit'))}}
         		</td>
         	</tr>
         	@endforeach

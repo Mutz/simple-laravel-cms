@@ -102,4 +102,4 @@ require app_path().'/composers.php';
 | Set portuguese localization
 |--------------------------------------------------------------------------
 */
-App::setLocale('pt');
+App::setLocale('en');

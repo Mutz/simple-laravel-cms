@@ -1,21 +1,4 @@
 <?php 
-Form::macro('textField',  function($name, $value='', $label, $class='', $required = false) {
-    if($required){
-      $required='required';
-    } else{
-      $required='';
-    }
-
-    $output = '<div class="field-box">'
-            . Form::label($name, $label)
-            . '<div class="col-md-7">'
-            . Form::text($name, $value, array('class'=>'form-control ' . $class, 'placeholder'=>$label,$required))
-            . $errors->first($name,'<div><span class="error">:message</span></div>')
-            . '</div>'
-          . '</div>';
-    
-    return $output;
-});
 
 //Register a macro for an icon link
 HTML::macro('menuLink', function($link, $icon, $title, $class = '', $dropdown = false)
@@ -49,60 +32,7 @@ Form::macro('modLink', function($btnText, $href, $attributes = array()) {
     return $output;
 });
 
-//Register a macro for a button link
-Form::macro('radioAnswer', function($inputName, $value, $label, $required='') {
-    $output = '<label class="radio">';
-    $output .= '<input type="radio" name="'. $inputName .'" value="'. $value .'" ' . $required . '>';
-    $output .= $label;
-    $output .= '</label>';
-    
-    return $output;
-});
 
-//Register a macro for a button link
-Form::macro('checkboxAnswer', function($inputName, $value, $label, $required) {
-
-    $output = '<label class="checkbox">';
-    $output .= '<input type="checkbox" name="'. $inputName .'" value="'. $value .'"' . $required . '>';
-    $output .= $label;
-    $output .= '</label>';
-    
-    return $output;
-});
-
-Form::macro('textField',  function($name, $value='', $label, $class='', $required = false) {
-    if($required){
-      $required='required';
-    } else{
-      $required='';
-    }
-
-    $output = '<div class="form-group">'
-            . Form::label($name, $label,array('class'=>'col-md-3 control-label'))
-            . '<div class="col-md-9">'
-            . Form::text($name, $value, array('class'=>'form-control ' . $class, 'placeholder'=>$label,$required))
-            . '</div>'
-          . '</div>';
-    
-    return $output;
-});
-
-Form::macro('emailField', function($name, $value='', $label, $class='', $required = false) {
-    if($required){
-      $required='required';
-    } else{
-      $required='';
-    }
-
-    $output = '<div class="form-group">'
-            . Form::label($name, $label,array('class'=>'col-md-3 control-label'))
-            . '<div class="col-md-9">'
-            . Form::email($name, $value, array('class'=>'form-control ' . $class, 'placeholder'=>$label,$required))
-            . '</div>'
-          . '</div>';
-    
-    return $output;
-});
 HTML::macro('imageLink',  function($url, $title = null, $attributes = array(), $image = null, $secure = null) {
     if ($url<>'void'){
       $url = url($url);
@@ -128,6 +58,32 @@ HTML::macro('iconLink',  function($url, $title = null, $attributes = array(), $i
 
 });
 
+/*
+|--------------------------------------------------------------------------
+| Delete form macro
+|--------------------------------------------------------------------------
+|
+| This macro creates a form with only a submit button. 
+| We'll use it to generate forms that will post to a certain url with the DELETE method,
+| following REST principles.
+|
+*/
+Form::macro('delete',function($url, $button_label='Delete',$form_parameters = array(),$button_options=array()){
 
+    if(empty($form_parameters)){
+        $form_parameters = array(
+            'method'=>'DELETE',
+            'class' =>'delete-form',
+            'url'   =>$url
+            );
+    }else{
+        $form_parameters['url'] = $url;
+        $form_parameters['method'] = 'DELETE';
+    };
+
+  return Form::open($form_parameters)
+      . Form::button($button_label, $button_options)
+      . Form::close();
+});
  ?>
 

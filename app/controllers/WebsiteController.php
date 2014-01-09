@@ -11,7 +11,6 @@ class WebsiteController extends BaseController {
 	}
 	public function home()
 	{
-        // $news = $this->category->getArticlesExcerptsByCategorySlug('novidades');
 		$news = $this->category->getArticlesByCategorySlug('novidades',3);
         return View::make('website.home')
         			->with('news',$news);
@@ -49,6 +48,4 @@ class WebsiteController extends BaseController {
 	{
 		return View::make('dashboard.index');
 	}
-
-	
 }

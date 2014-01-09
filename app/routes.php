@@ -1,14 +1,5 @@
 <?php
 
-
-Route::get('test', function() {
-	// dd(Category::find(1)->articles);
-	dd(Category::getTitleByCategoryId(1));
-});
-
-
-
-Route::get('/', 'WebsiteController@home');
 Route::get('/login', 'WebsiteController@login');
 Route::post('/login', 'UsersController@login');
 
@@ -23,19 +14,23 @@ Route::group(array('prefix' => 'dashboard'), function()
     Route::get('/', 'WebsiteController@dashboard');
     Route::resource('category.article', 'ArticlesController');
 });
+Route::resource('users', 'UsersController');
+
 
 Route::group(array('before' => 'auth'), function()
-    {
-        \Route::get('elfinder', 'Barryvdh\Elfinder\ElfinderController@showIndex');
-        \Route::any('elfinder/connector', 'Barryvdh\Elfinder\ElfinderController@showConnector');
-        \Route::get('elfinder/tinymce', 'Barryvdh\Elfinder\ElfinderController@showTinyMCE4');
-    });
+{
+    \Route::get('elfinder', 'Barryvdh\Elfinder\ElfinderController@showIndex');
+    \Route::any('elfinder/connector', 'Barryvdh\Elfinder\ElfinderController@showConnector');
+    \Route::get('elfinder/tinymce', 'Barryvdh\Elfinder\ElfinderController@showTinyMCE4');
+});
 
+Route::group(array('before' => 'auth|cache.fetch','after'=>'cache.put'), function()
+{
+    Route::get('/', 'WebsiteController@home');
+    Route::get('/{category}/{article}', 'WebsiteController@article');
+    Route::get('/{category}', 'WebsiteController@index');
+});
 
-Route::get('/{category}/{article}', 'WebsiteController@article');
-Route::get('/{category}', 'WebsiteController@index');
-
-Route::resource('users', 'UsersController');
 
 
 /*==============================================
