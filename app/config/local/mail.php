@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => 'c662a16e-7a36-48ff-9324-803192363db6',
+	'username' => getenv("POSTMARK_API_KEY"),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,6 +93,6 @@ return array(
 	|
 	*/
 
-	'password' => 'c662a16e-7a36-48ff-9324-803192363db6',
+	'password' => getenv("POSTMARK_API_KEY"),
 
 );
