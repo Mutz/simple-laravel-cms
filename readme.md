@@ -1,6 +1,6 @@
 # Casa de pedra website and content management system
 
-* This small project is far from perfect. We still have a lot of things to do, but it's a start... *
+*This small project is far from perfect. We still have a lot of things to do, but it's a start...*
 
 ## Introduction
 
