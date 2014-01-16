@@ -30,7 +30,6 @@ The project uses [TinyMCE](http://www.tinymce.com/), and [elFinder](http://elfin
 * **Categories management** - not because of complexity, but because of lack of time. For now, I'm seeding the categories from `/app/database/seeds/CategorySeeder.php`. Create your own seed file or issue a pull request for category management.
 * Empty cache on article edit
 * A page to edit contact details so we can automatically generate a contact page on the site.
-* A dashboard
 * <del>The front-end is ugly</del>
 * Add localization for TinyMCE and elFinder
 * Much more, obviously...

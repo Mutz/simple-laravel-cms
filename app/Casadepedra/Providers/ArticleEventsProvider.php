@@ -18,7 +18,7 @@ class ArticleEventsProvider extends ServiceProvider {
             $category_key = Config::get('cache.prefix') . url($article->category->slug);
             $article_key = Config::get('cache.prefix') . url($article->category->slug . '/' . $article->slug);
             $home_key = Config::get('cache.prefix') . url('/');
-            
+
             Cache::forget($category_key);
             Cache::forget($article_key);
             Cache::forget($home_key);

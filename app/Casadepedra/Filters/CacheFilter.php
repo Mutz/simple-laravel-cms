@@ -5,19 +5,20 @@ use Iluminate\Http\Request;
 use Iluminate\Http\Response;
 use Cache;
 use Config;
-use Str;
 
 class CacheFilter {
 
 	public function get($route, $request)
 	{	
 		$key = $this->makeKey($request->url());
+		// dd(url('/'));
 		if (Cache::has($key)) return Cache::get($key);
 	}
 
 	public function put($route, $request, $response)
 	{
 		$key = $this->makeKey($request->url());
+		// dd($response->getContent());
 		if (!Cache::has($key)) Cache::put($key, $response->getContent(), 360);
 	}
 

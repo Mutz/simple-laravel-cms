@@ -18,12 +18,12 @@ Route::post('/login', array('before'=>'guest','uses'=>'UsersController@login'));
 /*==============================================
 =                    Website                   =
 ==============================================*/
-// Route::group(array('before' => 'cache.fetch','after'=>'cache.put'), function()
-// {
+Route::group(array('before' => 'cache.fetch','after'=>'cache.put'), function()
+{
     Route::get('/', 'WebsiteController@home');
     Route::get('/{category}/{article}', 'WebsiteController@article');
     Route::get('/{category}', 'WebsiteController@index');
-// });
+});
 Route::post('/contato', 'WebsiteController@contact');
 
 /*-----         End of Website          ------*/
