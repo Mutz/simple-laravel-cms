@@ -31,11 +31,13 @@ The project uses [TinyMCE](http://www.tinymce.com/), and [elFinder](http://elfin
 * Empty cache on article edit
 * A page to edit contact details so we can automatically generate a contact page on the site.
 * A dashboard
-* The front-end is ugly
+* <del>The front-end is ugly</del>
 * Add localization for TinyMCE and elFinder
 * Much more, obviously...
 
-**P.s.:** I'm tracking the "vendor" folder. Don't shoot me! I was having issues with composer on OpenShift. At the moment I don't remeber what the error was, but I'll post is here as soon as I can, maybe someone can help me solve it and do things right.
+**P.S 1:** I'm tracking the "vendor" folder. Don't shoot me! I was having issues with composer on OpenShift. At the moment I don't remeber what the error was, but I'll post is here as soon as I can, maybe someone can help me solve it and do things right.
+
+**P.S 2** The bootstrap theme I'm using is [DesignR](https://wrapbootstrap.com/theme/designr-one-page-personal-portfolio-WB0L1JT31). I bought the single site license, so if you'd like to use it for your site, please buy it, it's only 8 bucks or so.
 
 ## Screenshots list
 
