@@ -195,7 +195,7 @@
         "assets/img/slide3.jpg"    
       ], {duration: 4500, fade: 750});
 
-      $('body').append('<img class="preload-image" src="assets/contact-bg.png" style="display:none;"/>');
+      $('body').append('<img class="preload-image" src="assets/contact-bg.jpg" style="display:none;"/>');
 
       $('#como-chegar').waypoint(function(direction){
       
@@ -204,7 +204,7 @@
         $('.backstretch').remove();
       
         if (direction=='down'){
-          $.backstretch('assets/contact-bg.png');
+          $.backstretch('assets/contact-bg.jpg');
         }else{
           $.backstretch([
             "assets/img/slide1.jpg",
