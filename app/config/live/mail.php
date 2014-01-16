@@ -8,5 +8,5 @@ return array(
 	'encryption' => 'tls',
 	'username' => getenv("POSTMARK_API_KEY"),
 	'password' => getenv("POSTMARK_API_KEY"),
-	'pretend' => true,
+	'pretend' => false,
 );

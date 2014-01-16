@@ -1,6 +1,7 @@
 <?php 
 
 return array(
+	'sitename' => 'Casa de Pedra',
 	'dashboard' => 'Dashboard',
 	'articles' => 'Articles',
 	'new' => 'New',

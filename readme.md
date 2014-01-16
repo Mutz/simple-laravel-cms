@@ -14,12 +14,12 @@ The project uses [TinyMCE](http://www.tinymce.com/), and [elFinder](http://elfin
 * Grunt for task automation (LESS compilation, concatenation, minification, live reload)
 * Fully restful
 * TinyMCE WYSIWYG editor
-* elFinder file manager (as I mentioned, using Barry Heuvels laravel-elfinder package)
+* elFinder file manager (once again, big "Thank You" to Barry Heuvels for his laravel-elfinder package)
 * Validator service with separate validation for creating and editing
 * Image upload and editing
 * Internationalization
 * Automatic slug generation, making URI-s which are user and SEO friendly (i.e. www.mysite.com/cool-category/even-cooler-article)
-* Caching
+* Caching (with event listeners to clean appropriate cache keys on any change in articles(create,update,delete))
 * [OpenShift](https://openshift.redhat.com/) deploy ready ("public" folder renamed to "php", and deploy hook creating a symlink to the "data" folder so uploaded images don't get wiped out on deploy)
 * Portuguese localization files
 
@@ -32,8 +32,8 @@ The project uses [TinyMCE](http://www.tinymce.com/), and [elFinder](http://elfin
 * A page to edit contact details so we can automatically generate a contact page on the site.
 * A dashboard
 * The front-end is ugly
-* Much more, obviously...
 * Add localization for TinyMCE and elFinder
+* Much more, obviously...
 
 **P.s.:** I'm tracking the "vendor" folder. Don't shoot me! I was having issues with composer on OpenShift. At the moment I don't remeber what the error was, but I'll post is here as soon as I can, maybe someone can help me solve it and do things right.
 

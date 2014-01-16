@@ -9,29 +9,32 @@
 // Grays
 // -------------------------
 
-@gray-darker:            #2E2217;
-@gray-dark:              #535e60;
-@gray:                   #5D6A6C;
-@gray-blue:              #33455a;
-@gray-light:             #BDC3C7;
-@gray-lighter:           #ECF0F1;
+@gray-darker:           #2E2217;
+@gray-dark:             #535e60;
+@gray:                  #5D6A6C;
+@gray-blue:             #33455a;
+@gray-light:            #BDC3C7;
+@gray-lighter:			#ECF0F1;
 
-@brown:	 				#85531B;
-@yellow:	 			#f9c726; //#D9C787;
+@green-light:			#E0E3C5;
+@green-dark: 			#A6A887;
+@brown: 				#594D43;
+@copper: 				#C26F4C;
+@yellow: 				#DEDA87;
 
 // Brand colors
 // -------------------------
-@brand-primary:         #B32C06;
-@brand-success:         #6DA690;	//@green-dark
+@brand-primary:         @copper;
+@brand-success:         darken(@green-dark,30%);	//@green-dark
 @brand-warning:         @yellow;  	
-@brand-danger:          @brand-primary;
-@brand-info:            @brown;
+@brand-danger:          darken(@copper,30%);
+@brand-info:            @green-dark;
 
 // Scaffolding
 // -------------------------
 
 @body-bg:               #fff;
-@text-color:            @gray-darker;
+@text-color:            @brown;
 
 // Links
 // -------------------------

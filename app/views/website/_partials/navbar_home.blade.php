@@ -1,24 +1,32 @@
-    <div class="navbar navbar-default navbar-fixed-top"  role="navigation">
-      <!-- <div class="cbp-af-inner"> -->
-        <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topnav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+    <!-- ==============================================
+    MAIN NAV
+    =============================================== -->
+    <div id="main-nav" class="navbar navbar-fixed-top">
+      <div class="container">
+              <div class="navbar-header">
+        
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+            <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
           </button>
-          {{HTML::imageLink('/','',array('class'=>'navbar-brand', 'id'=>'logo'),asset('assets/img/logo.jpg'))}}
+          
+          <!-- ======= LOGO ========-->
+          {{HTML::imageLink('#home','',array('class'=>'navbar-brand scrollto', 'id'=>'logo'),asset('assets/img/logo.jpg'))}}
         </div>
         
-        <div class="navbar-collapse collapse pull-right" id="topnav">
-            <ul class="nav navbar-nav">
-                <li>{{link_to('/', trans('general.home'))}}</li>
+        <div id="site-nav" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                  {{link_to('/', trans('general.home'))}}
+                </li>
                 @foreach($categories as $category)
                   <li>{{link_to($category->slug, $category->title)}}</li>
                 @endforeach
+                <li>
+                  {{link_to(url('/').'#contato', trans('general.contact'))}}
+                </li>
             </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      <!-- </div> -->
-    </div>
+        </div><!--End navbar-collapse -->
+        
+      </div><!--End container -->
+      
+    </div><!--End main-nav -->

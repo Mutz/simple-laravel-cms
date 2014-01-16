@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": ">= 3.0.3",
-    "summernote": ">=0.4.2",
-    "blueimp-file-upload": "~9.4"
+    "jquery-backstretch": "~2.0.4",
+    "flexslider": "*",
+    "jquery-waypoints": "~2.0.3",
+    "masonry": "~3.1.4",
+    "modernizr": "~2.7.1"
   }
 }

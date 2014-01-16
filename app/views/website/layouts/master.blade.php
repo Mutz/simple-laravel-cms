@@ -1,19 +1,15 @@
 @include('website._partials.head')
 
-<body @yield('body_class')>
-<div class="wrap">
-	@section('navbar')
-		@include('website._partials.navbar_inner')
-	@show
-	
-	@yield('content')
-	
-</div>
-@include('website._partials.footer')
+<body data-spy="scroll" data-target="#main-nav" data-offset="200" @yield('body_class')>
+	@include('website._partials.navbar_home')
 
-@section('javascript')
-	{{HTML::script(asset('assets/javascript/frontend.js'))}}
-@show
+    @yield('content')
+	
+    @include('website._partials.footer')
+
+    @section('javascript')
+    	{{HTML::script(asset('assets/javascript/frontend.js'))}}
+    @show
 
 </body>
 </html>

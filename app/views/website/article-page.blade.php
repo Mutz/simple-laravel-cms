@@ -9,12 +9,14 @@
 @stop
 
 @section('content')
-	<div class="container main articles">
+	<section id="inner-page-header">
 		<div class="row">
 			<div class="col-md-12">
 		        <h1  class="mg-b-big text-center">{{$category_title}}</h1>
 			</div>
 		</div>
+	</section>
+	<div class="container main articles mg-t-bg">
 	    <div class="row">
 	    	<div class="col-md-4 box">
 	    		@include('website._partials.sidebar')

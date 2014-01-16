@@ -4,12 +4,13 @@ use Iluminate\Routing\Route;
 use Iluminate\Http\Request;
 use Iluminate\Http\Response;
 use Cache;
+use Config;
 use Str;
 
 class CacheFilter {
 
 	public function get($route, $request)
-	{
+	{	
 		$key = $this->makeKey($request->url());
 		if (Cache::has($key)) return Cache::get($key);
 	}
@@ -21,6 +22,6 @@ class CacheFilter {
 	}
 
 	protected function makeKey($url){
-		return 'cdp_rt_' . Str::slug($url);
+		return Config::get('cache.prefix') . $url;
 	}
 }

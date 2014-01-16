@@ -54,7 +54,9 @@ class ArticlesController extends BaseController {
 		$this->validator->setCreateRules();
 
 		if($this->validator->passes($data) ){
-			$this->article->create($data);
+			$article = $this->article->create($data);
+
+			Event::fire('article.update',$article);
 
 			return Redirect::to('dashboard/category/' . $category_id . '/article')
 					->withMessage(trans('dashboard.articles.added'))
@@ -103,12 +105,15 @@ class ArticlesController extends BaseController {
 		$this->validator->setEditRules($article_id);
 
 		if($this->validator->passes($data) ){
-			$this->article->update($data,$article_id);
+			$article = $this->article->update($data,$article_id);
+
+			Event::fire('article.update',$article);
 
 			return Redirect::to('dashboard/category/' . $category_id . '/article')
 					->withMessage(trans('dashboard.articles.added'))
 					->withStatus('OK');
 		}
+
 		return Redirect::back()
 				->withInput($data)
 				->withErrors($this->validator->errors());
@@ -123,7 +128,10 @@ class ArticlesController extends BaseController {
 	public function destroy($category_id,$article_id)
 	{
 		$article = $this->article->find($article_id);
+		Event::fire('article.update',$article);
+
 		$article->delete();
+
 		return Redirect::to('dashboard/category/' . $category_id . '/article')
 				->withMessage(trans('dashboard.articles.added'))
 				->withStatus('OK');

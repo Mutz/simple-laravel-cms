@@ -1,8 +1,10 @@
 <?php 
 
 return array(
+	'sitename' => 'Casa de Pedra',
 	'dashboard' => 'Painel de controle',
 	'articles' => 'Artigos',
+	'contact' => 'Contato',
 	'new' => 'Novo',
 	'save' => 'Salvar',
 	'delete' => 'Excluir',

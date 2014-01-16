@@ -6,4 +6,5 @@
 
 @section('content')
 	Index of dashboard
+    {{trans('general.sitename')}}
 @stop

@@ -23,11 +23,22 @@ module.exports = function(grunt) {
         },
         js_frontend: {
           src: [
+              './bower_components/modernizr/modernizr.js',
               './bower_components/jquery/jquery.min.js',
-              './app/assets/javascript/frontend.js',
-              './app/assets/javascript/slider.js',
-              './app/assets/javascript/classie.js',
+              './bower_components/eventEmitter/EventEmitter.js',
+              './bower_components/eventie/eventie.js',
+              './bower_components/doc-ready/doc-ready.js',
+              './bower_components/get-style-property/get-style-property.js',
+              './bower_components/get-size/get-size.js',
+              './bower_components/matches-selector/matches-selector.js',
+              './bower_components/outlayer/item.js',
+              './bower_components/outlayer/outlayer.js',
+              './bower_components/masonry/masonry.js',
+              './bower_components/jquery-waypoints/waypoints.js',
+              './bower_components/jquery-backstretch/jquery.backstretch.min.js',
               './bower_components/bootstrap/dist/js/bootstrap.min.js',
+              './app/assets/javascript/frontend.js',
+              './app/assets/javascript/contactFormValidator.js',
               ],
           dest: './php/assets/javascript/frontend.js',
         },
@@ -61,7 +72,7 @@ module.exports = function(grunt) {
       watch: {
         js_frontend: {
           files: ['./app/assets/javascript/frontend.js'],   //watched files
-          tasks: ['concat:js_frontend','uglify'],     //tasks to run
+          tasks: ['concat:js_frontend'],     //tasks to run
           options: {
             livereload: true                        //reloads the browser
           }
