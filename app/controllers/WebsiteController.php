@@ -14,7 +14,7 @@ class WebsiteController extends BaseController {
 	}
 	public function home()
 	{
-		$news = $this->category->getArticlesByCategorySlug('novidades',8);
+		$news = $this->category->getArticlesByCategorySlug('novidades',6);
         return View::make('website.home')
         			->with('news',$news);
 	}
