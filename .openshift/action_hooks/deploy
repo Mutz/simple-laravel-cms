@@ -4,7 +4,6 @@
 # up again.  This script gets executed directly, so it could be python, php,
 # ruby, etc.
  
-// .openshift/action_hooks/deploy
 #!/bin/bash
 # .openshift/action_hooks/deploy
 
