@@ -18,7 +18,6 @@ class CacheFilter {
 	public function put($route, $request, $response)
 	{
 		$key = $this->makeKey($request->url());
-		// dd($response->getContent());
 		if (!Cache::has($key)) Cache::put($key, $response->getContent(), 360);
 	}
 
