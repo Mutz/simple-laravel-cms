@@ -10,4 +10,5 @@
 ln -sf $OPENSHIFT_DATA_DIR/uploads $OPENSHIFT_REPO_DIR/php/imagens
 cd $OPENSHIFT_REPO_DIR
 curl -sS https://getcomposer.org/installer | php
+php composer.phar install
 php composer.phar dump-autoload
