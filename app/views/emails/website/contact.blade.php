@@ -4,7 +4,7 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <h2>Você recebeu um email pelo formulario de contato do site {{Config::get('app.url')}}</h2>
+        <h2>{{trans('messages.contact_form_received')}} {{Config::get('app.url')}}</h2>
 
         <div>
             <strong>Nome:</strong> {{$nome}}
