@@ -19,7 +19,7 @@ class WebsiteContactMailer extends Mailer {
             $subject = Lang::get('messages.contact_form_received');
             $view = 'emails.website.contact';
             $from = Config::get('mail.from');
-            $data['$mensagem'] = nl2br($data['$mensagem']);  //convert new line characters to break lines <br>
+            $data['mensagem'] = nl2br($data['mensagem']);  //convert new line characters to break lines <br>
 
             return $this->sendTo($from['address'], $data['email'], $subject, $view, $data);
         } else{
