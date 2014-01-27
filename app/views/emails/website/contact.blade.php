@@ -7,9 +7,9 @@
         <h2>Você recebeu um email pelo formulario de contato do site {{Config::get('app.url')}}</h2>
 
         <div>
-            <strong>Nome:</strong> {{$data['nome']}}
-            <strong>Email:</strong> {{$data['email']}}
-            <strong>Mensagem:</strong> {{$data['mensagem']}}
+            <strong>Nome:</strong> {{$nome}}
+            <strong>Email:</strong> {{$email}}
+            <strong>Mensagem:</strong> {{$mensagem}}
         </div>
     </body>
 </html>
