@@ -4902,20 +4902,20 @@ $(document).ready(function() {
         });
         
         if(hasError) {
-            $('#contact-form button').html('<i class="icon-remove"></i>'+errorMessage);
+            $('#contact-form button').html('<i class="fa fa-remove"></i>'+errorMessage);
             setTimeout(function(){
                 $('#contact-form button').html(buttonCopy);
                 $('#contact-form button').width('auto');
             },2000);
         }
         else {
-            $('#contact-form button').html('<i class="icon-refresh icon-spin"></i>'+sendingMessage);
+            $('#contact-form button').html('<i class="fa fa-refresh fa-spin"></i>'+sendingMessage);
             
             var formInput = $(this).serialize();
             $.post($(this).attr('action'),formInput, function(data){
-                $('#contact-form button').html('<i class="icon-ok"></i>'+okMessage);
+                $('#contact-form button').html('<i class="fa fa-ok"></i>'+okMessage).css('font-size','1em');;
                 setTimeout(function(){
-                    $('#contact-form button').html(buttonCopy);
+                    $('#contact-form button').html(buttonCopy).css('font-size','1em');
                     $('#contact-form button').width('auto');
                 },2000);
                 

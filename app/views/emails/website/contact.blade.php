@@ -4,12 +4,12 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <h2>{{trans('messages.contact_form_received')}} {{Config::get('app.url')}}</h2>
+        <h3>{{trans('messages.contact_form_received')}} {{Config::get('app.url')}}</h3>
 
         <div>
-            <strong>Nome:</strong> {{$nome}}
-            <strong>Email:</strong> {{$email}}
-            <strong>Mensagem:</strong> {{$mensagem}}
+            <strong>Nome:</strong> {{$nome}}<br>
+            <strong>Email:</strong> {{$email}}<br>
+            <strong>Mensagem:</strong> <p>{{$mensagem}}</p>
         </div>
     </body>
 </html>
