@@ -157,7 +157,7 @@
                           <label class="control-label" for="contact-mail">Email</label>
                           <div class=" controls">
                             <i class="fa fa-envelope"></i>
-                            <input id="contact-mail" name="email" placeholder="Responder à" class="form-control input-lg requiredField" type="email" data-error-empty="Por favor, preencha o seu email" data-error-invalid="Email invalido">
+                            <input id="contact-mail" name="email" placeholder="Email" class="form-control input-lg requiredField" type="email" data-error-empty="Por favor, preencha o seu email" data-error-invalid="Email invalido">
                           </div>
                         </div><!-- End email input -->
                         
@@ -169,7 +169,7 @@
                             </div>
                         </div><!-- End textarea -->
                         
-                        <p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Error!" data-sending-message="Sending..." data-ok-message="Message Sent"><i class="fa fa-location-arrow"></i>Enviar</button></p>
+                        <p><button name="submit" type="submit" class="btn btn-theme btn-lg" data-error-message="Erro!" data-sending-message="Enviando..." data-ok-message="Mensagem Enviada"><i class="fa fa-location-arrow"></i>Enviar</button></p>
                         <input type="hidden" name="submitted" id="submitted" value="true" />
                         
                     {{Form::close()}}<!-- End contact-form -->
