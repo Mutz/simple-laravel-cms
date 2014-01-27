@@ -4913,9 +4913,9 @@ $(document).ready(function() {
             
             var formInput = $(this).serialize();
             $.post($(this).attr('action'),formInput, function(data){
-                $('#contact-form button').html('<i class="fa fa-ok"></i>'+okMessage).css('font-size','1em');;
+                $('#contact-form button').html('<i class="fa fa-ok"></i>'+okMessage).css('font-size','1em');
                 setTimeout(function(){
-                    $('#contact-form button').html(buttonCopy).css('font-size','1em');
+                    $('#contact-form button').html(buttonCopy).css('font-size','1.5em');
                     $('#contact-form button').width('auto');
                 },2000);
                 
