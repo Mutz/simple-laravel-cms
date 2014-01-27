@@ -4880,7 +4880,14 @@ $(document).ready(function() {
             sendingMessage = $('#contact-form button').data('sending-message'),
             okMessage = $('#contact-form button').data('ok-message'),
             hasError = false;
-        
+        var sendingMessageStyles = {
+            fontSize: "1em",
+            padding: "15px 50px"
+        };
+        var normalMessageStyles = {
+            fontSize: "1.5em",
+            padding: "15px 90px"
+        };
         $('#contact-form button').width(buttonWidth);
         $('#contact-form .error-message').remove();
         
@@ -4913,9 +4920,9 @@ $(document).ready(function() {
             
             var formInput = $(this).serialize();
             $.post($(this).attr('action'),formInput, function(data){
-                $('#contact-form button').html('<i class="fa fa-ok"></i>'+okMessage).css('font-size','1em');
+                $('#contact-form button').html('<i class="fa fa-check"></i>'+okMessage).css(sendingMessageStyles);
                 setTimeout(function(){
-                    $('#contact-form button').html(buttonCopy).css('font-size','1.5em');
+                    $('#contact-form button').html(buttonCopy).css(normalMessageStyles);
                     $('#contact-form button').width('auto');
                 },2000);
                 
