@@ -4,7 +4,6 @@
 .DS_Store
 /*.sublime-workspace
 /php/imagens
-/vendor
 /app/config/database.php
 /casadepedra.sublime-project
 /casadepedra.sublime-project~
