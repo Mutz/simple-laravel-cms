@@ -20,7 +20,7 @@ class WebsiteContactMailer extends Mailer {
             $view = 'emails.website.contact';
             $from = Config::get('mail.from');
 
-            return $this->sendTo($from['address'], $subject, $view, $data);
+            return $this->sendTo($from['address'], $data['email'], $subject, $view, $data);
         } else{
             return 'NOK';
         }
