@@ -15,8 +15,6 @@ Route::post('/login', array('before'=>'guest','uses'=>'UsersController@login'));
 
 
 
-
-
 /*==============================================
 =                   Dashboard                  =
 ==============================================*/
