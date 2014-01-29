@@ -37,7 +37,9 @@
                 
                 <div class="row quem-somos scrollimation fade-left">
                     <div class="col-md-12 text-center">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eos, aliquam, fugit, vitae ipsum eveniet blanditiis perspiciatis magnam cupiditate iure dolore laborum culpa deserunt nihil labore architecto perferendis maiores earum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, eos, aliquam, fugit, vitae ipsum eveniet blanditiis perspiciatis magnam cupiditate iure dolore laborum culpa deserunt nihil labore architecto perferendis maiores earum.</p>
+                        <p>Centro cultural criado na década de 90 (1997) pelo Mestre de capoeira Barteló com objetivo de multiplicar a capoeira angola. Criou um espaço para treinos que foi se tornando hospedagem para capoeiristas e amantes da capoeira angola atraídos também pela beleza exuberante do Vale do capão - Chapada Diamantina</p>
+                        <p>Espaço aberto para outras praticas culturais, a casa mantém a disponibilidade de horários para aulas de diversas praticas corporais, musical ou vivencial.</p>
+                        <p>A casa conta com 06 quartos para hospedagem e área de lazer com piscina (cascata e hidromassagem) e um agradabilíssimo jardim com enorme variedade de flores.</p>
                     </div>
                 </div><!--End row (top) -->
 
