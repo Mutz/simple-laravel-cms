@@ -24,13 +24,9 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
-
-	'local' => array('elvie'),
-	'live' => array('*rhcloud.com'),
-	// 'live' => array('*casadepedra-valedocapao.com.br'),
-
-));
+$env = $app->detectEnvironment(function() {
+    return getenv('LARAVEL_ENV') ?: 'local';
+});
 
 /*
 |--------------------------------------------------------------------------

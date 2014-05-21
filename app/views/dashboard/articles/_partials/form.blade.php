@@ -15,7 +15,7 @@
 </div>
 <div class="form-group">
 	{{Form::label('excerpt', trans('article.excerpt'))}}
-	{{Form::textarea('excerpt', NULL, array('class'=>'editor form-control'))}}
+	{{Form::textarea('excerpt', NULL, array('class'=>'editor form-control excerpt'))}}
 	<p class="error"><small>{{$errors->first('excerpt')}}</small></p>
 </div>
 {{link_to('dashboard/category/'.$category->id.'/article', trans('general.cancel'), array('class'=>'btn btn-flat warning'))}} 

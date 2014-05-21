@@ -18,11 +18,6 @@ class ArticlesController extends BaseController {
 		$this->validator = $validator;
 	}
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
 	public function index($category_id)
 	{
 		$all_articles = $this->article->getAllByCategory($category_id);
@@ -31,7 +26,7 @@ class ArticlesController extends BaseController {
 	}
 
 	/**
-	 * Show the form for creating a new resource.
+	 * Show the form for creating a new article.
 	 *
 	 * @return Response
 	 */

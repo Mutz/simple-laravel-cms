@@ -92,15 +92,6 @@
         </div>
     </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-<script src="js/vendor/jquery.ui.widget.js"></script>
-<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="js/jquery.iframe-transport.js"></script>
-<!-- The basic File Upload plugin -->
-<script src="js/jquery.fileupload.js"></script>
-<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script>
     /*jslint unparam: true */
     /*global window, $ */
@@ -108,13 +99,14 @@
         'use strict';
         // Change this to the location of your server-side upload handler:
         var url = window.location.hostname === 'blueimp.github.io' ?
-            '//jquery-file-upload.appspot.com/' : 'server/php/';
+            '//jquery-file-upload.appspot.com/' : 'api/basic/';
         $('#fileupload').fileupload({
             url: url,
             dataType: 'json',
             done: function (e, data) {
                 $.each(data.result.files, function (index, file) {
-                    $('<p/>').text(file.name).appendTo('#files');
+//                    $('<p/>').text(file.name).appendTo('#files');
+                    $('<img/>').attr('src', file.name).appendTo('#files');
                 });
             },
             progressall: function (e, data) {

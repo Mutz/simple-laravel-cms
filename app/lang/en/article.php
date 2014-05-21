@@ -15,5 +15,5 @@ return array(
 	'are_you_sure' => 'Are you sure you want to delete this article?',
 	'read_more' => 'Read more',
 	'view_on_site' => 'View on site',
-
+    'gallery'=>'Gallery',
 );

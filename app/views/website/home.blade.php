@@ -4,7 +4,7 @@
 	Casa de Pedra - Vale do Capão, Chapada Diamantina
 @stop
 
-{section('navbar')
+@section('navbar')
 	@include('website._partials.navbar_home')
 @stop
 

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return array(
 	'title' => 'Título',
@@ -15,4 +15,5 @@ return array(
 	'are_you_sure' => 'Tem certeza de que deseja excluir este artigo?',
 	'read_more' => 'Leia mais',
 	'view_on_site' => 'Visualisar no site',
+    'gallery'=>'Gallery',
 );

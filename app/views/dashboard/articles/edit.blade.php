@@ -24,6 +24,12 @@
 				{{Form::close()}}
 			</div>
 		</div>
+		<div class="row mg-t-bg">
+			<div class="col-md-10 col-lg-8">
+                <h3>{{trans('article.gallery')}}</h3>
+                <input id="fileupload" type="file" name="files[]" multiple>
+			</div>
+		</div>
 	</div>
 @stop
 

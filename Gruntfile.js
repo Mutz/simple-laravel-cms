@@ -47,6 +47,9 @@ module.exports = function(grunt) {
               './bower_components/jquery/jquery.min.js',
               './bower_components/bootstrap/dist/js/bootstrap.min.js',
               './bower_components/tinymce/js/tinymce/tinymce.min.js',
+              './bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js',
+              './bower_components/blueimp-file-upload/js/jquery.iframe-transport.js',
+              './bower_components/blueimp-file-upload/js/jquery.fileupload.js',
               './app/assets/javascript/backend.js'
           ],
           dest: './php/assets/javascript/backend.js',
@@ -55,7 +58,7 @@ module.exports = function(grunt) {
           src: [
               './php/assets/stylesheets/backend.css',
           ],
-          dest: './php/assets/stylesheets/backend.css',
+          dest: './php/assets/stylesheets/backend.css'
         },
       },
       uglify: {

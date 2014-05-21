@@ -11,7 +11,7 @@ class ArticleValidator extends Validator {
 	        // 'user_id' => 'required|exists:users,id', // Assumes db connection
 	        // 'status_id' => 'required|exists:statuses,id', // Assumes db connection
 	        'body' => 'required',
-	        'slug' => 'required, unique:articles,slug',
+	        'slug' => 'required|unique:articles,slug',
 
 		);
 	}

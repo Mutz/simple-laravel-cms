@@ -1,8 +1,30 @@
 <?php
-Route::get('test', function(){
-
+Route::get('basic', function() {
+    return View::make('upload.basic');
 });
+Route::post('api/basic', function()
+{
+    // Grab our files input
+    $files = Input::file('files');
+    // We will store our uploads in public/uploads/basic
+    $assetPath = '/uploads';
+    $uploadPath = public_path($assetPath);
+    // We need an empty arry for us to put the files back into
+    $results = array();
 
+    foreach ($files as $file) {
+        // store our uploaded file in our uploads folder
+        $file->move($uploadPath, $file->getClientOriginalName());
+        // set our results to have our asset path
+        $name = $assetPath . '/' . $file->getClientOriginalName();
+        $results[] = compact('name');
+    }
+
+    // return our results in a files object
+    return array(
+        'files' => $results
+    );
+});
 
 /*==============================================
 =                    Login                     =
@@ -67,3 +89,5 @@ App::bind('Casadepedra\Interfaces\CategoryInterface','Casadepedra\Repositories\E
 // });
 
 /*-----  End of Bindings and Listeners  ------*/
+
+

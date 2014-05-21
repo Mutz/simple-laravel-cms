@@ -8,3 +8,5 @@
 /casadepedra.sublime-project
 /casadepedra.sublime-project~
 /.idea
+php/uploads
+.env.local.php
