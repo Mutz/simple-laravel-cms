@@ -30,7 +30,7 @@ class WebsiteController extends BaseController {
 	{
 		$articles_in_category = $this->category->getFullArticlesByCategorySlug($category_slug);
         $category_title = $articles_in_category->first();
-        $category_title = $category_title->category->title;
+        $category_title = ($category_title)?$category_title->category->title:trans('article.no-articles');
 
         return View::make('website.category-page')
         			->with('articles_in_category',$articles_in_category)

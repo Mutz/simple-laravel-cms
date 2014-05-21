@@ -16,4 +16,5 @@ return array(
 	'read_more' => 'Read more',
 	'view_on_site' => 'View on site',
     'gallery'=>'Gallery',
+    'no-articles' => 'No articles in this category'
 );
